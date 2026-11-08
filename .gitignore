@@ -1,0 +1,12 @@
+# Binaries and build artifacts
+bin/
+dist/
+*.exe
+*.test
+*.out
+
+# IDE and OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
