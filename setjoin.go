@@ -21,13 +21,13 @@ const (
 )
 
 var (
-	ErrTooManySets          = errors.New("input exceeds maximum allowed sets (1024)")
-	ErrTooManyTokensInSet   = errors.New("set exceeds maximum allowed tokens (1024)")
-	ErrTooManyMemberships   = errors.New("total token memberships exceed limit (65536)")
-	ErrDuplicateSetID       = errors.New("duplicate set identifier found")
-	ErrDuplicateToken       = errors.New("duplicate token found in set")
-	ErrInvalidThreshold     = errors.New("invalid threshold: require 1 <= p <= q <= 65535")
-	ErrNegativeBudget       = errors.New("budget limits must be non-negative")
+	ErrTooManySets        = errors.New("input exceeds maximum allowed sets (1024)")
+	ErrTooManyTokensInSet = errors.New("set exceeds maximum allowed tokens (1024)")
+	ErrTooManyMemberships = errors.New("total token memberships exceed limit (65536)")
+	ErrDuplicateSetID     = errors.New("duplicate set identifier found")
+	ErrDuplicateToken     = errors.New("duplicate token found in set")
+	ErrInvalidThreshold   = errors.New("invalid threshold: require 1 <= p <= q <= 65535")
+	ErrNegativeBudget     = errors.New("budget limits must be non-negative")
 )
 
 // Set represents an input set with a unique identifier and distinct tokens.
@@ -98,10 +98,10 @@ func gcd(a, b int) int {
 
 // internalSet wraps a set with ordered tokens and prefix length.
 type internalSet struct {
-	id          string
-	tokens      []uint32 // sorted by global token order
-	rawTokens   []uint32 // sorted numerically for fast two-pointer intersection
-	prefixLen   int
+	id        string
+	tokens    []uint32 // sorted by global token order
+	rawTokens []uint32 // sorted numerically for fast two-pointer intersection
+	prefixLen int
 }
 
 // JoinSets computes an exact batch Jaccard similarity join under rational threshold p/q.

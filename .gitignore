@@ -4,6 +4,8 @@ dist/
 *.exe
 *.test
 *.out
+__pycache__/
+*.pyc
 
 # IDE and OS
 .DS_Store
